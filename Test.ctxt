@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Test
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ mostrarImagenXImagen()
+comment3.params=
+comment3.target=void\ llenarColaDesdeArch()
+comment4.params=
+comment4.target=void\ llenarCola()
+comment5.params=msg
+comment5.target=void\ mostrarMensaje(java.lang.String)
+numComments=6

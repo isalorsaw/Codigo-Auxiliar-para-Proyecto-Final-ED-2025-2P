@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=NodoC
+comment1.params=ruta\ pregunta
+comment1.target=NodoC(java.lang.String,\ java.lang.String)
+comment2.params=ruta\ o1\ o2\ o3\ cor\ pre
+comment2.target=NodoC(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=
+comment4.target=int\ mostrarImagen()
+numComments=5

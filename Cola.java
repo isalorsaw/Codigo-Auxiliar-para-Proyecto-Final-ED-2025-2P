@@ -1,33 +1,32 @@
-
-/**
- * Write a description of class Cola here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Cola
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Cola
-     */
+    NodoC prim;
     public Cola()
     {
-        // initialise instance variables
-        x = 0;
+        prim=null;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public void encolar(NodoC c)
     {
-        // put your code here
-        return x + y;
+        if(prim==null)prim=c;
+        else
+        {
+            NodoC tmp=prim;
+            while(tmp.sig!=null)
+            {
+                tmp=tmp.sig;
+            }
+            tmp.sig=c;
+        }
+    }
+    public String toString()
+    {
+        String salida="Info de Cola\n";
+        NodoC tmp=prim;
+            while(tmp!=null)
+            {
+                salida+=tmp.toString()+"\n";
+                tmp=tmp.sig;
+            }
+            return salida;
     }
 }

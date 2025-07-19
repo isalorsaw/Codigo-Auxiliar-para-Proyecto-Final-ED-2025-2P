@@ -1,33 +1,49 @@
-
-/**
- * Write a description of class NodoC here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 public class NodoC
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class NodoC
-     */
-    public NodoC()
+    String ruta;
+    ImageIcon ima;
+    String pregunta;
+    String op1;
+    String op2;
+    String op3;
+    int correcta;
+    NodoC sig;
+    public NodoC(String ruta, String pregunta)
     {
-        // initialise instance variables
-        x = 0;
+        this.ruta=ruta;
+        this.ima=new ImageIcon(ruta);
+        this.pregunta=pregunta;
+        op1=op2=op3="";
+        correcta=0;
+        sig=null;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public NodoC(String ruta, String o1, String o2, String o3, String cor, String pre)
     {
-        // put your code here
-        return x + y;
+        this.ruta=ruta;
+        this.ima=new ImageIcon(ruta);
+        this.pregunta=pre;
+        op1=o1;
+        op2=o2;
+        op3=o3;
+        correcta=Integer.parseInt(cor);
+        sig=null;
+    }
+    public String toString()
+    {
+        return ruta+" "+pregunta+" "+op1+" "+op2+" "+op3+" "+correcta;
+    }
+    public int mostrarImagen()
+    {
+        int seleccion = JOptionPane.showOptionDialog(null,
+        pregunta, 
+        "Titulo",
+        JOptionPane.YES_NO_CANCEL_OPTION,
+        JOptionPane.QUESTION_MESSAGE,
+        ima,
+        new String[]{ op1,op2,op3},   // null para YES, NO y CANCEL
+        op1);
+        return seleccion+1;
     }
 }
